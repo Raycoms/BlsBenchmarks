@@ -1,0 +1,13 @@
+# Target labels
+ Bls
+# Source files and their labels
+/home/ray/CLionProjects/blsbench2/cmake-build-debug/CMakeFiles/Bls
+/home/ray/CLionProjects/blsbench2/cmake-build-debug/CMakeFiles/Bls.rule
+/home/ray/CLionProjects/blsbench2/cmake-build-debug/CMakeFiles/Bls-complete.rule
+/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-install.rule
+/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-mkdir.rule
+/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-download.rule
+/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-update.rule
+/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-patch.rule
+/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-configure.rule
+/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-build.rule

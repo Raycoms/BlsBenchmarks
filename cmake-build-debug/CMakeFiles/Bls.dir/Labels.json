@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/CMakeFiles/Bls"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/CMakeFiles/Bls.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/CMakeFiles/Bls-complete.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-install.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-mkdir.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-download.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-update.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-patch.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-configure.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/Bls-prefix/src/Bls-stamp/Bls-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Bls"
+		],
+		"name" : "Bls"
+	}
+}

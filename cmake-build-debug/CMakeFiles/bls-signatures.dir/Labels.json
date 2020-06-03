@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/CMakeFiles/bls-signatures"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/CMakeFiles/bls-signatures.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/CMakeFiles/bls-signatures-complete.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/bls-signatures-prefix/src/bls-signatures-stamp/bls-signatures-install.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/bls-signatures-prefix/src/bls-signatures-stamp/bls-signatures-mkdir.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/bls-signatures-prefix/src/bls-signatures-stamp/bls-signatures-download.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/bls-signatures-prefix/src/bls-signatures-stamp/bls-signatures-update.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/bls-signatures-prefix/src/bls-signatures-stamp/bls-signatures-patch.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/bls-signatures-prefix/src/bls-signatures-stamp/bls-signatures-configure.rule"
+		},
+		{
+			"file" : "/home/ray/CLionProjects/blsbench2/cmake-build-debug/bls-signatures-prefix/src/bls-signatures-stamp/bls-signatures-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bls-signatures"
+		],
+		"name" : "bls-signatures"
+	}
+}

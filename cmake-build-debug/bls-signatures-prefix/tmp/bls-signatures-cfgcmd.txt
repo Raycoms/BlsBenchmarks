@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-j;-GCodeBlocks - Unix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'
