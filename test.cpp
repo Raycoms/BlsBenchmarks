@@ -9,27 +9,20 @@
 using namespace bls;
 using namespace std;
 
-const size_t K = 70;
-const size_t N = 100;
+const size_t K = 35;
+const size_t N = 50;
+const size_t Threads = 10;
+const bool threaded = true;
 
 atomic_int counter(0);
 vector<PublicKey> pubs;
 
 vector<InsecureSignature> sigShareIn;
 
-vector<size_t> players;
-vector<InsecureSignature> sigShareOut;
-mutex values_mutex;
+uint8_t theHash[32];
 
-
-
-void values_push_back(const InsecureSignature& sig, const int player)
-{
-    values_mutex.lock();
-    sigShareOut.push_back(sig);
-    players.push_back(player);
-    values_mutex.unlock();
-}
+size_t *playersArr[N];
+InsecureSignature *sigShareOutArr[N];
 
 struct ThreadData
 {
@@ -41,15 +34,35 @@ struct ThreadData
 
 void *executeSlave(void *threadarg)
 {
+    //clock_t start, end;
+    //start = clock();
 
-    for( int x = 0; x < N; x++ )
+    struct ThreadData *my_data;
+    my_data = static_cast<ThreadData *>(threadarg);
+
+    for( int x = my_data->index; x < my_data->index + my_data->count; x++ )
     {
-        sigShareU1[x].Verify({hash}, {pubs[x]});
-        players.push_back(x+1);
+        cout << "Thread: " << my_data->index << endl;
+        clock_t start, end;
+        start = clock();
+
+        if (sigShareIn[x].Verify({theHash}, {pubs[x]}))
+        {
+            sigShareOutArr[x] = &sigShareIn[x];
+            playersArr[x] = new size_t(x+1);
+            counter.operator++();
+        }
+        end = clock();
+        cout << end - start << ':' << CLOCKS_PER_SEC << ':' << (((float) end - start) / CLOCKS_PER_SEC)
+             << endl;
     }
+
+    //end = clock();
+    //cout << end - start << ':' << CLOCKS_PER_SEC << ':' << (((float) end - start) / CLOCKS_PER_SEC)<< endl;
+
+    pthread_exit(NULL);
 }
 
-//todo parallelize verification
 //todo setup communication (star)
 //todo try out different CPUS
 int main()
@@ -129,12 +142,15 @@ int main()
     }
 
     uint8_t msg[7] = {100, 100, 100, 100, 100, 100, 100};
-    uint8_t hash[32];
+
     int messageSize = (size_t) sizeof(msg);
 
-    Util::Hash256(hash, msg, messageSize);
+    Util::Hash256(theHash, msg, messageSize);
 
     sigShareIn.reserve(N);
+
+    vector<InsecureSignature> sigShareOut;
+    vector<size_t> players;
     sigShareOut.reserve(N);
     players.reserve(N);
 
@@ -146,40 +162,58 @@ int main()
     clock_t start, end;
     start = clock();
 
-
-    //
-    pthread_t threads[N];
-    vector<ThreadData> td;
-    td.reserve(N);
-
-    for( int x = 0; x < N; x++ )
+    if (threaded)
     {
-        cout << "main() : creating thread, " << x << endl;
-        PrivateKey priv = PrivateKey::AggregateInsecure(recvdFrags[x]);
-        pubs.push_back(priv.GetPublicKey());
-        td[x] = ThreadData(x+1, &priv, &masterPubkey);
+        pthread_t threads[Threads];
+        vector<ThreadData> td;
+        td.reserve(Threads);
+        int each = N / Threads;
+        cout << each << endl;
+        for (int x = 0; x < Threads; x++)
+        {
+            cout << "main() : creating thread, " << x << endl;
+            td[x] = ThreadData(x * each, each);
 
-        int rc = pthread_create(&threads[x], NULL, executeSlave, (void *)&td[x]);
+            int rc = pthread_create(&threads[x], NULL, executeSlave, (void *) &td[x]);
 
-        if (rc) {
-            cout << "Error:unable to create thread," << rc << endl;
-            exit(-1);
+            if (rc)
+            {
+                cout << "Error:unable to create thread," << rc << endl;
+                exit(-1);
+            }
+        }
+
+        while (counter < N)
+        {
+            // Busy wait
+            std::this_thread::sleep_for(10ms);
+        }
+
+        for( int x = 0; x < N; x++ )
+        {
+            if (sigShareOutArr[x] != nullptr)
+            {
+                sigShareOut.push_back(*sigShareOutArr[x]);
+                players.push_back(*playersArr[x]);
+            }
+        }
+    }
+    else
+    {
+        for( int x = 0; x < N; x++ )
+        {
+            if (sigShareIn[x].Verify({theHash}, {pubs[x]}))
+            {
+                sigShareOut.push_back(sigShareIn[x]);
+                players.push_back(x+1);
+            }
         }
     }
 
-
-    //todo while atomic int < what we want, wait >
-
-    for( int x = 0; x < N; x++ )
-    {
-        sigShareU1[x].Verify({hash}, {pubs[x]});
-        players.push_back(x+1);
-    }
-
     InsecureSignature signature = Threshold::AggregateUnitSigs(sigShareOut, msg, messageSize, &players[0], K);
-    Util::Hash256(hash, msg, sizeof(msg));
+    Util::Hash256(theHash, msg, sizeof(msg));
 
-    if (!signature.Verify({hash}, {masterPubkey}))
+    if (!signature.Verify({theHash}, {masterPubkey}))
     {
         cout << "Verification failed" << endl;
     }
@@ -187,4 +221,9 @@ int main()
     end = clock();
     cout << end - start << ':' << CLOCKS_PER_SEC << ':' << (((float) end - start) / CLOCKS_PER_SEC)
          << endl;
+
+    for (auto & x : playersArr)
+    {
+        delete x;
+    }
 }
