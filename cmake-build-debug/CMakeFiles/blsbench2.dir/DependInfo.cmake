@@ -10,9 +10,9 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../../../Documents/IdeaProjects/bls-signatures/src"
-  "../../../Documents/IdeaProjects/bls-signatures/build/contrib/relic/include"
-  "../../../Documents/IdeaProjects/bls-signatures/contrib/relic/include"
+  "../bls/src"
+  "../bls/build/contrib/relic/include"
+  "../bls/contrib/relic/include"
   )
 
 # Targets to which this target links.

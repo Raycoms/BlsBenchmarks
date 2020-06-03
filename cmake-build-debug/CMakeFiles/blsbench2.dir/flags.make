@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ray/CLionProjects/blsbench2/../../Documents/IdeaProjects/bls-signatures/src -I/home/ray/CLionProjects/blsbench2/../../Documents/IdeaProjects/bls-signatures/build/contrib/relic/include -I/home/ray/CLionProjects/blsbench2/../../Documents/IdeaProjects/bls-signatures/contrib/relic/include 
+CXX_INCLUDES = -I/home/ray/CLionProjects/blsbench2/bls/src -I/home/ray/CLionProjects/blsbench2/bls/build/contrib/relic/include -I/home/ray/CLionProjects/blsbench2/bls/contrib/relic/include 
 

@@ -44,9 +44,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/ray/CLionProjects/blsbench2/../../Documents/IdeaProjects/bls-signatures/src"/>
-					<Add directory="/home/ray/CLionProjects/blsbench2/../../Documents/IdeaProjects/bls-signatures/build/contrib/relic/include"/>
-					<Add directory="/home/ray/CLionProjects/blsbench2/../../Documents/IdeaProjects/bls-signatures/contrib/relic/include"/>
+					<Add directory="/home/ray/CLionProjects/blsbench2/bls/src"/>
+					<Add directory="/home/ray/CLionProjects/blsbench2/bls/build/contrib/relic/include"/>
+					<Add directory="/home/ray/CLionProjects/blsbench2/bls/contrib/relic/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
@@ -69,9 +69,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/ray/CLionProjects/blsbench2/../../Documents/IdeaProjects/bls-signatures/src"/>
-					<Add directory="/home/ray/CLionProjects/blsbench2/../../Documents/IdeaProjects/bls-signatures/build/contrib/relic/include"/>
-					<Add directory="/home/ray/CLionProjects/blsbench2/../../Documents/IdeaProjects/bls-signatures/contrib/relic/include"/>
+					<Add directory="/home/ray/CLionProjects/blsbench2/bls/src"/>
+					<Add directory="/home/ray/CLionProjects/blsbench2/bls/build/contrib/relic/include"/>
+					<Add directory="/home/ray/CLionProjects/blsbench2/bls/contrib/relic/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>

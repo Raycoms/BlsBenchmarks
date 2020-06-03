@@ -1,0 +1,2 @@
+/usr/bin/ar qc libblstmp.a  CMakeFiles/blstmp.dir/extendedpublickey.cpp.o CMakeFiles/blstmp.dir/extendedprivatekey.cpp.o CMakeFiles/blstmp.dir/chaincode.cpp.o CMakeFiles/blstmp.dir/signature.cpp.o CMakeFiles/blstmp.dir/publickey.cpp.o CMakeFiles/blstmp.dir/privatekey.cpp.o CMakeFiles/blstmp.dir/bls.cpp.o CMakeFiles/blstmp.dir/aggregationinfo.cpp.o CMakeFiles/blstmp.dir/threshold.cpp.o
+/usr/bin/ranlib libblstmp.a

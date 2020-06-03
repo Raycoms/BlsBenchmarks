@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/runtest.dir/test.cpp.o  -o runtest  libblstmp.a ../contrib/relic/lib/librelic_s.a -lrt -lpthread -lm 
