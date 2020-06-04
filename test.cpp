@@ -11,7 +11,7 @@ using namespace std;
 
 const size_t K = 35;
 const size_t N = 50;
-const size_t Threads = 10;
+const size_t Threads = 2;
 const bool threaded = true;
 
 atomic_int counter(0);
@@ -219,6 +219,8 @@ int main()
     }
 
     end = clock();
+
+    cout << "Final:" << endl;
     cout << end - start << ':' << CLOCKS_PER_SEC << ':' << (((float) end - start) / CLOCKS_PER_SEC)
          << endl;
 
