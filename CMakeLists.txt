@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.16.6)
 project(blsbench2)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -6,6 +6,10 @@ set(SOURCE_FILES test.cpp)
 
 INCLUDE_DIRECTORIES(bls/src)
 LINK_DIRECTORIES(bls/build/src)
+
+#INCLUDE_DIRECTORIES(salticidae/include)
+#LINK_DIRECTORIES(salticidae/CMakeFiles/salticidae.dir/src)
+#LINK_DIRECTORIES(salticidae)
 
 LINK_DIRECTORIES(bls/build/contrib/relic/lib)
 INCLUDE_DIRECTORIES(bls/build/contrib/relic/include)
