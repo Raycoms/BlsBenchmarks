@@ -1,19 +1,4 @@
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/ray/CLionProjects/blsbench2
-CMake Warning (dev) at /usr/local/lib/cmake/protobuf/protobuf-options.cmake:6 (option):
-  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
-  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
-  set the policy and suppress this warning.
-
-  For compatibility with older versions of CMake, option is clearing the
-  normal variable 'protobuf_MODULE_COMPATIBLE'.
-Call Stack (most recent call first):
-  /usr/local/lib/cmake/protobuf/protobuf-config.cmake:2 (include)
-  CMakeLists.txt:16 (find_package)
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
--- Using protobuf 
--- Found Protobuf: /usr/local/lib/libprotobuf.a;-lpthread (found version "3.11.2") 
--- Using gRPC 1.28.1
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/ray/CLionProjects/blsbench2

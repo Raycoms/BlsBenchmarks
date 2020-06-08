@@ -99,29 +99,6 @@ blsbench2_EXTERNAL_OBJECTS =
 
 blsbench2: CMakeFiles/blsbench2.dir/test.cpp.o
 blsbench2: CMakeFiles/blsbench2.dir/build.make
-blsbench2: /lib/libgrpc++.a
-blsbench2: /usr/local/lib/libprotobuf.a
-blsbench2: /usr/lib/libz.so
-blsbench2: /lib/libgrpc.a
-blsbench2: /lib/libssl.a
-blsbench2: /lib/libcrypto.a
-blsbench2: /lib/libz.a
-blsbench2: /lib/libcares.a
-blsbench2: /lib/libaddress_sorting.a
-blsbench2: /lib/libgpr.a
-blsbench2: /lib/libabsl_str_format_internal.a
-blsbench2: /lib/libabsl_strings.a
-blsbench2: /lib/libabsl_throw_delegate.a
-blsbench2: /lib/libabsl_strings_internal.a
-blsbench2: /lib/libabsl_base.a
-blsbench2: /lib/libabsl_dynamic_annotations.a
-blsbench2: /lib/libabsl_spinlock_wait.a
-blsbench2: /usr/lib/librt.so
-blsbench2: /lib/libabsl_int128.a
-blsbench2: /lib/libabsl_bad_optional_access.a
-blsbench2: /lib/libabsl_raw_logging_internal.a
-blsbench2: /lib/libabsl_log_severity.a
-blsbench2: /lib/libupb.a
 blsbench2: CMakeFiles/blsbench2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ray/CLionProjects/blsbench2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable blsbench2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/blsbench2.dir/link.txt --verbose=$(VERBOSE)

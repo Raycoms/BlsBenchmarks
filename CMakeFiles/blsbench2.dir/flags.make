@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS = -g   -std=gnu++14
 
-CXX_DEFINES = -DCARES_STATICLIB -D__CLANG_SUPPORT_DYN_ANNOTATION__
+CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ray/CLionProjects/blsbench2/bls/src -I/home/ray/CLionProjects/blsbench2 -I/home/ray/CLionProjects/blsbench2/bls/build/contrib/relic/include -I/home/ray/CLionProjects/blsbench2/bls/contrib/relic/include -isystem /include 
+CXX_INCLUDES = -I/home/ray/CLionProjects/blsbench2/bls/src -I/home/ray/CLionProjects/blsbench2/bls/build/contrib/relic/include -I/home/ray/CLionProjects/blsbench2/bls/contrib/relic/include 
 

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <bls.hpp>
 #include <random>
-#include <pthread.h>
 #include <thread>
 #include <atomic>
 #include <cmath>
