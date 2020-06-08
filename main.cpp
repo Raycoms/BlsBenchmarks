@@ -10,7 +10,7 @@ using namespace std;
 
 const size_t K = 350;
 const size_t N = 500;
-const size_t Threads = 51;
+const size_t Threads = 50;
 
 atomic_int counter(0);
 vector<PublicKey> pubs;
@@ -126,7 +126,7 @@ int main() {
         sigShareIn.push_back(privs[x].SignInsecure(msg, messageSize));
     }
 
-    for (int n = 1; n < Threads; n++) {
+    for (int n = 1; n <= Threads; n++) {
 
         auto start = std::chrono::steady_clock::now();
 
