@@ -1,3 +1,0 @@
-/home/ray/CLionProjects/blsbench2/CMakeFiles/rebuild_cache.dir
-/home/ray/CLionProjects/blsbench2/CMakeFiles/edit_cache.dir
-/home/ray/CLionProjects/blsbench2/CMakeFiles/blsbench2.dir

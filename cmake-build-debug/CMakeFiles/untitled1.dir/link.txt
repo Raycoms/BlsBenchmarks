@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/untitled1.dir/main.cpp.o  -o untitled1   -L/home/ray/CLionProjects/untitled1/bls/build/src  -L/home/ray/CLionProjects/untitled1/bls/build/contrib/relic/lib  -Wl,-rpath,/home/ray/CLionProjects/untitled1/bls/build/src:/home/ray/CLionProjects/untitled1/bls/build/contrib/relic/lib -lblstmp -lrelic_s -lpthread 

@@ -1,4 +1,4 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/ray/CLionProjects/blsbench2
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/ray/CLionProjects/untitled1
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ray/CLionProjects/blsbench2
+-- Build files have been written to: /home/ray/CLionProjects/untitled1/cmake-build-debug

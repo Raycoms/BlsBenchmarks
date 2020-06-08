@@ -1,3 +1,0 @@
-repository='https://github.com/Chia-Network/bls-signatures user= password='
-module=''
-tag=''
