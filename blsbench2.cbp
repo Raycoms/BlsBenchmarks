@@ -5,7 +5,7 @@
 		<Option title="blsbench2"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\;CMake Files\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\usr\lib64\cmake\grpc\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/ray/CLionProjects/blsbench2"/>
@@ -44,9 +44,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
 					<Add directory="/home/ray/CLionProjects/blsbench2/bls/src"/>
+					<Add directory="/home/ray/CLionProjects/blsbench2"/>
 					<Add directory="/home/ray/CLionProjects/blsbench2/bls/build/contrib/relic/include"/>
 					<Add directory="/home/ray/CLionProjects/blsbench2/bls/contrib/relic/include"/>
+					<Add directory="/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/ray/CLionProjects/blsbench2/Makefile&quot;  VERBOSE=1 blsbench2"/>
@@ -62,9 +66,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
 					<Add directory="/home/ray/CLionProjects/blsbench2/bls/src"/>
+					<Add directory="/home/ray/CLionProjects/blsbench2"/>
 					<Add directory="/home/ray/CLionProjects/blsbench2/bls/build/contrib/relic/include"/>
 					<Add directory="/home/ray/CLionProjects/blsbench2/bls/contrib/relic/include"/>
+					<Add directory="/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/ray/CLionProjects/blsbench2/Makefile&quot;  VERBOSE=1 blsbench2/fast"/>
@@ -79,6 +87,33 @@
 		</Unit>
 		<Unit filename="/home/ray/CLionProjects/blsbench2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/ray/CLionProjects/blsbench2/../../../../usr/local/lib/cmake/protobuf/protobuf-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/home/ray/CLionProjects/blsbench2/../../../../usr/local/lib/cmake/protobuf/protobuf-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/home/ray/CLionProjects/blsbench2/../../../../usr/local/lib/cmake/protobuf/protobuf-options.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/home/ray/CLionProjects/blsbench2/../../../../usr/local/lib/cmake/protobuf/protobuf-targets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/home/ray/CLionProjects/blsbench2/../../../../usr/local/lib/cmake/protobuf/protobuf-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/home/ray/CLionProjects/blsbench2/../../../../usr/lib64/cmake/grpc/gRPCConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/ray/CLionProjects/blsbench2/../../../../usr/lib64/cmake/grpc/gRPCConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/ray/CLionProjects/blsbench2/../../../../usr/lib64/cmake/grpc/gRPCTargets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/ray/CLionProjects/blsbench2/../../../../usr/lib64/cmake/grpc/gRPCTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\grpc\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -143,6 +143,33 @@ blsbench2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blsbench2.dir/build.make CMakeFiles/blsbench2.dir/build
 .PHONY : blsbench2/fast
 
+src/MainServer.o: src/MainServer.cpp.o
+
+.PHONY : src/MainServer.o
+
+# target to build an object file
+src/MainServer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blsbench2.dir/build.make CMakeFiles/blsbench2.dir/src/MainServer.cpp.o
+.PHONY : src/MainServer.cpp.o
+
+src/MainServer.i: src/MainServer.cpp.i
+
+.PHONY : src/MainServer.i
+
+# target to preprocess a source file
+src/MainServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blsbench2.dir/build.make CMakeFiles/blsbench2.dir/src/MainServer.cpp.i
+.PHONY : src/MainServer.cpp.i
+
+src/MainServer.s: src/MainServer.cpp.s
+
+.PHONY : src/MainServer.s
+
+# target to generate assembly for a file
+src/MainServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blsbench2.dir/build.make CMakeFiles/blsbench2.dir/src/MainServer.cpp.s
+.PHONY : src/MainServer.cpp.s
+
 test.o: test.cpp.o
 
 .PHONY : test.o
@@ -179,6 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... blsbench2"
+	@echo "... src/MainServer.o"
+	@echo "... src/MainServer.i"
+	@echo "... src/MainServer.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

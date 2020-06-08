@@ -1,0 +1,32 @@
+
+service SetupService {
+    rpc Start (Setup) returns (Empty) {};
+}
+
+service RequestSignature {
+    rpc Req (Request) returns (Response) {};
+}
+
+// Empty response type.
+message Empty {
+
+}
+
+// Receive keyshare and public key as well as ID.
+message Setup {
+    required int32 id = 1;
+    required bytes keyShare = 2;
+    required bytes masterPub = 3;
+}
+
+// Request to sign a message.
+message Request {
+    required bytes message = 1;
+    required bytes thresholdSig = 2;
+}
+
+// Send the signed message.
+message Response {
+    required int32 id = 1;
+    required bytes signature = 2;
+}

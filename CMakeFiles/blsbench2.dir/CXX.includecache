@@ -19,7 +19,7 @@ thread
 -
 atomic
 -
-mutex
+cmath
 -
 
 bls/build/contrib/relic/include/relic_conf.h

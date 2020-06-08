@@ -21,7 +21,7 @@ struct ThreadData
     ThreadData(const int index, const int count): index(index), count(count){};
 };
 
-void executeSlave(ThreadData my_data)
+void executeWorker(ThreadData my_data)
 {
     for( int x = my_data.index; x < my_data.index + my_data.count; x++ )
     {
