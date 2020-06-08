@@ -8,9 +8,9 @@
 using namespace bls;
 using namespace std;
 
-const size_t K = 140;
-const size_t N = 200;
-const size_t Threads = 20;
+const size_t K = 700;
+const size_t N = 1000;
+const size_t Threads = 50;
 
 atomic_int counter(0);
 vector<PublicKey> pubs;
@@ -73,11 +73,12 @@ int main() {
         Threshold::Create(commits[i], frags[i], K, N);
     }
 
-    for (int target = 1; target <= N; ++target) {
-        for (int source = 1; source <= N; ++source) {
-            Threshold::VerifySecretFragment(target, frags[source - 1][target - 1], commits[source - 1], K);
-        }
-    }
+    // In practice we need this at every process. This will save us a lot of evaluation time though for now to disable it. todo, thread this here too.
+    //for (int target = 1; target <= N; ++target) {
+    //    for (int source = 1; source <= N; ++source) {
+    //        Threshold::VerifySecretFragment(target, frags[source - 1][target - 1], commits[source - 1], K);
+    //    }
+    //}
 
     std::vector<PublicKey> keys;
     keys.reserve(N);
