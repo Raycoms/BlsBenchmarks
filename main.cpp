@@ -8,8 +8,8 @@
 using namespace bls;
 using namespace std;
 
-const size_t K = 175;
-const size_t N = 250;
+const size_t K = 700;
+const size_t N = 1000;
 const size_t Threads = 50;
 
 atomic_int counter(0);
